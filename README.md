@@ -30,7 +30,7 @@ Save users in a .txt file
 Simple CLI menu
 
 📦 How to Clone & Run
-git clone https://github.com/USERNAME/go-user-manager.git
+git clone https://github.com/Rezomoon/go-user-manager-with-text-file.git
 cd go-user-manager
 go run main.go
 
@@ -67,7 +67,7 @@ It's only for learning Go basics such as file handling, CLI, and data structures
 اجرای پروژه داخل ترمینال
 
 📦 کلون و اجرای پروژه
-git clone https://github.com/USERNAME/go-user-manager.git
+git clone https://github.com/Rezomoon/go-user-manager-with-text-file.git
 cd go-user-manager
 go run main.go
 
@@ -75,4 +75,5 @@ go run main.go
 
 این پروژه برای استفاده واقعی یا ذخیره امن پسورد نیست.
 فقط برای یادگیری مفاهیم پایه زبان گو طراحی شده است.
+
 
