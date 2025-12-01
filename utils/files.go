@@ -24,12 +24,16 @@ func CheckFile(filneName string) (string, error) {
 var text string
 
 func CreateFile(filneName string, userNameMap map[string]string) (bool, error) {
-
+	var newText strings.Builder
 	for key, value := range userNameMap {
-		text += key
-		text = text + " . " + value + " . "
+		// text += key
+		// text = text + " . " + value + " . "
+		newText.WriteString(key)
+		newText.WriteString(" . ")
+		newText.WriteString(value)
+		newText.WriteString(" . ")
 	}
-	err := os.WriteFile(filneName, []byte(text), 0644)
+	err := os.WriteFile(filneName, []byte(newText.String()), 0644)
 	if err != nil {
 		return false, err
 	}
@@ -61,14 +65,21 @@ func UserNameList(dataList []string) []string {
 }
 
 func AddUser(fileName string, userName string, password string) {
+	var newText strings.Builder
 	f, err := os.OpenFile(fileName, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 	if err != nil {
 		panic(err)
 	}
 	defer f.Close()
-	text += userName
-	text += " . " + password + " . "
-	_, err = f.WriteString(text)
+
+	// text += userName
+	// text += " . " + password + " . "
+
+	newText.WriteString(userName)
+	newText.WriteString(" . ")
+	newText.WriteString(password)
+	newText.WriteString(" . ")
+	_, err = f.WriteString(newText.String())
 	if err != nil {
 		panic(err)
 	}
